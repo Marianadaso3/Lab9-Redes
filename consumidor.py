@@ -25,9 +25,6 @@ all_temp = []
 all_hume = []
 all_wind = []
 
-
-# ... (configuración de Kafka y listas de datos)
-
 # Función para procesar y graficar datos
 
 def plot_all_data():
@@ -68,7 +65,6 @@ def encode_data(data):
 
     return encoded_data
 
-# ... (código existente)
 
 def decode_data(encoded_data):
     # Desempaquetar los datos

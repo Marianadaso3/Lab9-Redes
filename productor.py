@@ -1,3 +1,8 @@
+#Autores: Mariana David y Pablo Escobar
+#Redes - 2023
+#Laboratorio 9
+#Programa: Productor.py
+
 from confluent_kafka import Producer
 import random
 import json

@@ -1,3 +1,8 @@
+#Autores: Mariana David y Pablo Escobar
+#Redes - 2023
+#Laboratorio 9
+#Programa: consumidor.py
+
 import threading
 import tkinter as tk
 from matplotlib.figure import Figure
@@ -67,12 +72,12 @@ class KafkaDataConsumer:
     def plot_all_data(self):
         self.figure.clear()
         ax = self.figure.add_subplot(111)
-        ax.plot(self.all_temp, label='Temperatura')
-        ax.plot(self.all_hume, label='Humedad')
+        ax.plot(self.all_temp, label='Temperatura', color='purple')
+        ax.plot(self.all_hume, label='Humedad', color='pink')
         ax.legend()
         ax.set_xlabel('Muestras')
         ax.set_ylabel('Valores')
-        ax.set_title('Laboratorio9-Redes- En vivo')
+        ax.set_title('Telemetría en Vivo')
         self.canvas.draw()
 
 # Configura el servidor y el topic de Kafka
@@ -81,7 +86,7 @@ topic = '201055'
 
 # Crear una ventana de Tkinter
 root = tk.Tk()
-root.title('Telemetría en Vivo')
+root.title('Laboratorio9-Redes')
 
 # Crear y iniciar el consumidor de Kafka en un hilo
 kafka_consumer = KafkaDataConsumer(bootstrap_servers, topic)
